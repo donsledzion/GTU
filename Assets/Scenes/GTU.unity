@@ -253,6 +253,10 @@ MonoBehaviour:
   cameraOffset: {x: 0, y: 0, z: 0}
   lockRotation: 0
   mountPoint: {fileID: 1226346327}
+  playerSpeed: 0
+  dynamicOffset: 0
+  minDistance: 0
+  maxDistance: 0
 --- !u!81 &135943443
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1107,6 +1111,10 @@ MonoBehaviour:
   cameraOffset: {x: 0, y: 15, z: 0}
   lockRotation: 1
   mountPoint: {fileID: 0}
+  playerSpeed: 0
+  dynamicOffset: 1
+  minDistance: 15
+  maxDistance: 30
 --- !u!1 &1028228715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,6 +1269,10 @@ PrefabInstance:
     - target: {fileID: 400046, guid: 7b6675de545141649953fd8adec4561b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 7b6675de545141649953fd8adec4561b, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b6675de545141649953fd8adec4561b, type: 3}
@@ -1607,6 +1619,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 878fe35068584fd458b649dfd1184354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 16
+  rotationSpeed: 140
+  animator: {fileID: 0}
+  playerRb: {fileID: 0}
+  collisionCollider: {fileID: 1453318926}
+  jumpTime: 0.75
+  jumping: 0
+  punchTime: 0.1
+  punchedAt: 0
+  punchForce: 0
+  otherRbs: []
+  carExitSpot: {fileID: 0}
+  inTheCar: 0
+  nearbyCars: []
+  target: {fileID: 1741800187}
 --- !u!1001 &1460359829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1839,6 +1866,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1741800187 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5017082794832033888, guid: 30193d5ea096a8a4883bcdad6255e8a1, type: 3}
+  m_PrefabInstance: {fileID: 5017082793819319228}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1785548410
 GameObject:
   m_ObjectHideFlags: 0
@@ -2166,6 +2198,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6422499533437353996, guid: 5406b762b8b9e084b83a944ef0654551, type: 3}
+      propertyPath: collisionCollider
+      value: 
+      objectReference: {fileID: 476345492}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5406b762b8b9e084b83a944ef0654551, type: 3}
 --- !u!1001 &5017082793819319228
